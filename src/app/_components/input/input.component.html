@@ -1,0 +1,9 @@
+<label>
+    <span>{{ title }}</span>
+    <input [type]="type" [placeholder]="placeholder" #inputRef (change)="inputValueEmitter.emit(inputRef.value)">
+</label>
+
+<!-- <label>{{ label }}
+    <span *ngIf="isPassword" (click)="togglePassword()">O</span>
+    <input class="input" [placeholder]="placeholder" [type]="type" #inputRef (change)="value.emit(inputRef.value)">
+</label> -->

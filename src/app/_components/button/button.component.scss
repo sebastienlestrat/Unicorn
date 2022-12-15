@@ -1,0 +1,28 @@
+button {
+    width: 100%;
+    padding: 5px;
+    height: 35px;
+    border-radius: 6px;
+    gap: 10px;
+    color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    transition: 1s all;
+    
+    &.primary {
+        background-color: #007AFF;
+        &:hover, &:focus {
+            background-color: #086cd7;
+        }
+    }
+    &.secondary {
+        background-color: #333333;
+        &:hover, &:focus{
+            background-color: #000000;
+        }
+    }
+}
