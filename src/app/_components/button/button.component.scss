@@ -1,4 +1,4 @@
-button {
+button  {
     width: 100%;
     padding: 5px;
     height: 35px;
@@ -12,8 +12,9 @@ button {
 
     cursor: pointer;
     transition: 1s all;
-    
+
     &.primary {
+
         background-color: #007AFF;
         &:hover, &:focus {
             background-color: #086cd7;

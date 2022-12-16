@@ -1,6 +1,11 @@
-<button class="button" type="submit" >
-    <img src="button-sigin.png" alt="">
+<button type="submit" [class]="className">
+    <ng-content></ng-content>
 </button>
+
+
+<!-- <button type="submit" class="button" [ngStyle]="{backgroundColor:color}" (click)="actionEnvoi()">
+    <ng-content></ng-content>
+</button> -->
 
 
 <!-- <button type="submit" [class]="className" (click)="click.emit()">

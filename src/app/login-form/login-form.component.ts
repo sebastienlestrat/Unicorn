@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./login-form.component.scss']
 })
 export class LoginFormComponent {
+  objet!: Object;
+
   constructor(private router:Router) {}
   navigateToRegister() {
     this.router.navigateByUrl('/register');
@@ -18,6 +20,10 @@ export class LoginFormComponent {
   
   validateLogin(username:string) {
     console.log(username)
+  }
+
+  actionEcouteur() {
+      this.router.navigateByUrl('')
   }
   
 }

@@ -16,7 +16,7 @@ const routes: Routes = [
     component: ContainerComponent, // ContainerComponent => Router-Outlet
     children: [
       {
-        path: '', // localhost:4200
+        path: 'login', // localhost:4200
         component: LoginFormComponent
       },
       {

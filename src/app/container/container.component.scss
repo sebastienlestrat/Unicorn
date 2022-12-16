@@ -33,8 +33,9 @@ main {
     background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding: 24px; // à la base 48px
+    justify-content: space-evenly;
+    padding: 1.5em;
+    gap: 1px;
     flex: 3;
 }
 
@@ -45,9 +46,11 @@ main {
 }
 
 .footer, .footerleft {
+    font-size: 0.85em;
+    gap: 0.5em;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between ;
     color: #666666;
     .textBlue {
         color: #007AFF;

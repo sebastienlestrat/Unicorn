@@ -1,55 +1,66 @@
-<h1 class="title">Nice to see you again</h1>
+    <h1 class="title">Nice to see you again</h1>
 
-<h3>Login</h3>
-<!-- <div class="log"> -->
+
+    <div class="log">
+
+            <p>Login</p>
+            <app-input class="login" label="enter login" placeholder="Email or phone number"></app-input>
+            <p>Password</p>
+            <app-input label="password" placeholder="Enter password" type="password"></app-input>
+        
+    </div>
+
+    <div class="remember">
+        <div class="rememberLeft">
+            <input class="apple-switch" type="checkbox">
+            <p>Remember me</p>
+        </div>
+        
+        <button type="submit" class="textRight">Forgot password?</button>
+    </div>
+
+    <!-- utilisation de composant réutilisable (button) -->
+    <div class="submit">
+
+        <app-button className="primary">
+        Sign in
+        </app-button>
     
-        <app-input class="login" label="enter login" placeholder="Email or phone number"></app-input>
-        <app-input label="password" placeholder="Enter password" type="password"></app-input>
-    
+        <hr />
 
-<div class="remember">
-    <input class="apple-switch" type="checkbox">Remember me
-    <button type="submit" class="textLeft">Forgot password?</button>
-</div>
+        <app-button className="secondary">
+          <img src="assets/login_wrap/logo-google.png" alt="">  Or sign in with google 
+        </app-button>
 
-<div class="submit">
-<app-button className="primary">
-    Sign in
-</app-button>
-<app-button className="secondary" icon="/assets/login_wrap/logo-google.png">
-    Or sign in with google
-</app-button>
-</div>
+<!--         autre moyen pour modifier un bouton -> si je souhaite juste changer la couleur directement
+        <app-button color="#000000" (clickEmitter)="actionEcouteur()">
+            Or sign in with google
+        </app-button> -->
+    </div>
 
-<div class="noAccount">
-    <p>
-        Don't have an account?
-        <span class="textBlue" (click)="navigateToRegister()">Sign up now</span>
-    </p>
-</div>
+    <div class="noAccount">
+        <p>
+            Don't have an account?
+            <span class="textBlue" (click)="navigateToRegister()">Sign up now</span>
+        </p>
+    </div>
 
 
 
 
 
-<!-- <h1 class="title">Nice to see you again</h1>
+    <!-- <h1 class="title">Nice to see you again</h1>
 
-<div class="log">
-    <app-input placeholder="Enter your e-mail" title="Login" type="text" (inputValueEmitter)="validateLogin($event)"></app-input>
-    <app-input placeholder="Enter your password" title="Password" type="password"></app-input>
-</div>
+    <div class="log">
+        <app-input placeholder="Enter your e-mail" title="Login" type="text" (inputValueEmitter)="validateLogin($event)"></app-input>
+        <app-input placeholder="Enter your password" title="Password" type="password"></app-input>
+    </div>
 
-<div class="remember">
-    <input class="apple-switch" type="checkbox">Remember me
-    <button type="submit" class="textLeft">Forgot password?</button>
-</div>
+    <div class="remember">
+        <input class="apple-switch" type="checkbox">Remember me
+        <button type="submit" class="textLeft">Forgot password?</button>
+    </div>
 
-<hr />
+    <hr />
+     -->
 
-
-<div class="noAccount">
-    <p>
-        Don't have an account?
-        <span class="textBlue" (click)="navigateToRegister()">Sign up now</span>
-    </p>
-</div> -->
