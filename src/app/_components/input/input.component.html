@@ -1,6 +1,7 @@
 <label>
     <span>{{ title }}</span>
     <input [type]="type" [placeholder]="placeholder" #inputRef (change)="inputValueEmitter.emit(inputRef.value)">
+    <ng-content></ng-content>
 </label>
 
 <!-- <label>{{ label }}

@@ -1,11 +1,13 @@
     <h1 class="title">Nice to see you again</h1>
 
-
     <div class="log">
 
-            <p>Login</p>
+         <!-- utilisation de composant réutilisable (input) -->
+          
+            <label for="email">Login</label>
             <app-input class="login" label="enter login" placeholder="Email or phone number"></app-input>
-            <p>Password</p>
+        
+            <label for="password">Password</label>
             <app-input label="password" placeholder="Enter password" type="password"></app-input>
         
     </div>
@@ -16,7 +18,9 @@
             <p>Remember me</p>
         </div>
         
-        <button type="submit" class="textRight">Forgot password?</button>
+        <button (click)="onRegister()" type="submit" class="textRight">
+            <p>Forgot password?</p>
+        </button>
     </div>
 
     <!-- utilisation de composant réutilisable (button) -->
@@ -40,8 +44,9 @@
 
     <div class="noAccount">
         <p>
-            Don't have an account?
+            <!-- Don't have an account?
             <span class="textBlue" (click)="navigateToRegister()">Sign up now</span>
+            -->
         </p>
     </div>
 

@@ -1,0 +1,38 @@
+h1 {
+  font-family: 'Poppins' ;
+  font-size: 1.4em;
+}
+
+// Problème d'afficahge, je n'arrive pas
+//à bien répartir les élements !
+form{
+  display: flex;
+  justify-content: space-between;
+}
+.containerSide {
+  background-color: white;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+title {
+  font-size: smaller;
+}
+
+p {
+  font-size: 0.8em;
+}
+
+label {
+  font-size: 0.85em;
+}
+ 
+select {
+  width: 18%;
+  display: flex;
+  flex-direction: row;
+  border: none;
+  background: #f7f7f7;
+}

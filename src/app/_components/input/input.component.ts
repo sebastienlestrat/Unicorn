@@ -1,11 +1,11 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit ,Output } from '@angular/core';
 
 @Component({
   selector: 'app-input',
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.scss']
 })
-export class InputComponent {
+export class InputComponent implements OnInit {
   // Parent => Fils
   @Input() title!: string;
   @Input() placeholder!: string;
@@ -13,7 +13,11 @@ export class InputComponent {
 
   // Fils => Parent
   @Output() inputValueEmitter: EventEmitter<string> = new EventEmitter<string>();
+  isPassword!: boolean;
 
+  ngOnInit () {
+    this.isPassword = this.type == 'password';
+  }
 }
 
 

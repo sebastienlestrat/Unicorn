@@ -1,14 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContainerComponent } from './container/container.component';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
-import { AvatarComponent } from './_pages/avatar/avatar.component';
 import { DashboardComponent } from './_pages/dashboard/dashboard.component';
-import { EyesinputComponent } from './_pages/eyesinput/eyesinput.component';
-import { GooglelogoComponent } from './_pages/googlelogo/googlelogo.component';
-import { ImageComponent } from './_pages/image/image.component';
-import { SigninComponent } from './_pages/signin/signin.component';
+
 
 const routes: Routes = [
   {
@@ -18,6 +15,10 @@ const routes: Routes = [
       {
         path: 'login', // localhost:4200
         component: LoginFormComponent
+      },
+      {
+        path: 'forgetpassword',
+        component : ForgetPasswordComponent
       },
       {
         path: 'register', // localhost:4200/register

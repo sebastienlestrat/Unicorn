@@ -14,6 +14,7 @@ import { DashboardComponent } from './_pages/dashboard/dashboard.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { ButtonComponent } from './_components/button/button.component';
 import { InputComponent } from './_components/input/input.component';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { InputComponent } from './_components/input/input.component';
     DashboardComponent,
     RegisterFormComponent,
     ButtonComponent,
-    InputComponent
+    InputComponent,
+    ForgetPasswordComponent
   ],
   imports: [
     BrowserModule,
