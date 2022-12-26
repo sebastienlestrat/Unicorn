@@ -13,17 +13,16 @@ export class LoginFormComponent implements OnInit {
   constructor (private router : Router) {}
 
 
-ngOnInit() : void {}
+  ngOnInit() : void {}
 
-onRegister () : void {
-  this.router.navigateByUrl('forgetpassword')
+  onForgetPassword () : void {
+   this.router.navigateByUrl('forgetpassword')
 }
 
 
-  // constructor(private router:Router) {}
-  // navigateToRegister() {
-  //   this.router.navigateByUrl('/register');
-  // }
+  onRegister() {
+  this.router.navigateByUrl('/register');
+  }
 
   // login() {
   //   console.log('TRYING TO LOG IN')

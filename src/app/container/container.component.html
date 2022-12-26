@@ -6,10 +6,22 @@
     <div class="containerSide">
         <div class="entete">
             <img class="avatar" src="/assets/login_wrap/avatar-ui.png" alt="Avatar">
-            <h2 class="title">UI Unicorn</h2>
+            <h2 class="title"><a routerLink="">UI Unicorn</a></h2>
+            
+        <!-- Je voulais le faire via un click sur le logo, mais le css devient degueu  -->
+        <!-- <img (click)="onLogin()" class="avatar" src="/assets/login_wrap/avatar-ui.png" alt="Avatar">
+        <router-outlet></router-outlet> -->
         </div>
 
-        <a routerLink="login">Continuer vers Unicorn</a>
+       <!-- ça mets un peu le basard ce button pour arriver à la page login -->
+        <!-- <div class="submit">
+            <app-button className="primary">
+            <a routerLink="login">Sign in</a>
+            </app-button>
+        <router-outlet></router-outlet>
+        </div> -->
+
+        <!-- me permets de faire le lien localhost/4200/login  -->
         <router-outlet></router-outlet>
     
 
