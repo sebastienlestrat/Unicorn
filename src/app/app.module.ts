@@ -15,6 +15,7 @@ import { RegisterFormComponent } from './register-form/register-form.component';
 import { ButtonComponent } from './_components/button/button.component';
 import { InputComponent } from './_components/input/input.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms' ;
 
 @NgModule({
   declarations: [
@@ -34,7 +35,9 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
