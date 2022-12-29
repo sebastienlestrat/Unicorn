@@ -16,4 +16,9 @@ export class ForgetPasswordComponent implements OnInit {
       this.route = params ['forgetpassword'];
     })
   }
+
+  // Faire une alert quand mail send
+  onSend () {
+    alert ('Mail send on your mailbox') ;
+  }
  }
