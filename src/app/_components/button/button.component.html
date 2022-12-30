@@ -1,4 +1,4 @@
-<button type="submit" [class]="className">
+<button type="submit" [class]="className" (click)="clickEmitter.emit()">
     <ng-content></ng-content>
 </button>
 

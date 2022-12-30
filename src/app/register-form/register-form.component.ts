@@ -1,4 +1,3 @@
-import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
 
@@ -9,39 +8,38 @@ import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
 })
 export class RegisterFormComponent implements OnInit {
 
+  validateName(username : string) {
+    console.log(username) ;
+  }
+  
+  validatePassword (password : string) {
+    console.log(password) ;
+  }
+
   registerForm! : FormGroup ;
   passwordRegex! : RegExp ; 
-  i! : number ;
 
   constructor(private formBuilder : FormBuilder) {}
 
   ngOnInit(): void {
     
-    this.passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{15,}$/;
+    this.passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
 
     this.registerForm = this.formBuilder.group({
-      username : [null, [
+      username : ['', [ // le "" représente la valeur par défaut
         Validators.required,
-        Validators.maxLength(15)
       ]] , 
-      email : [null, [
+      email : ['', [
         Validators.required,
-        Validators.maxLength(15)
+        Validators.email
       ]],
-      password : [null, [
+      password : ['', [
         Validators.required, 
-        Validators.pattern(this.passwordRegex),
-        Validators.maxLength(15)
       ]] ,
-      phone : this.formBuilder.array([
-        Validators.required,
-        Validators.minLength(8) 
-      ]) 
-    }, {
-      updateOn : 'blur'
+      phone : this.formBuilder.array([]),
     }) ;
+    
   }
-
   get username () {
     return this.registerForm.get('username') ;
   }
@@ -54,26 +52,27 @@ export class RegisterFormComponent implements OnInit {
   get phones () {
     return this.registerForm.get('phones') as FormArray ;
   }
+  
   getPhones (index : number) {
   return this.phones.controls[index].get('phoneNumber') ; 
   }
 
+  getPhoneCode (index : number) {
+    return this.phones.controls[index].get('phoneCode') ; 
+    }
 
-  
-// bug de validation sur le formulaire ?? mettre du text si le input est invalid
-  onSubmitForm () : void {
-    console.log(this.registerForm.value) ; 
 
-    // if (!this.registerForm.valid) 
-    // {
-    //   alert ('Form is invalid') ; 
-    //   return ;
-    // } 
-    //   else 
-    // {
-    //   alert ('Succes')
-    // }
-    
+  onSubmitForm () {
+    if (!this.registerForm.valid) {
+      alert ('Form is invalid') ; 
+      return ;
+    } 
+      alert (' Please, verify your identity on the link in your mailbox');
   }
+
+  onLogin () {
+    console.log ('Bonjour' + this.username)
+  }
+
 
 }

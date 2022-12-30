@@ -1,16 +1,4 @@
-h1 {
-  font-family: 'Poppins' ;
-  font-size: 1.4em;
-  color: #F8F8F8;
-}
-
-form{
-  display: flex;
-  justify-content: space-between;
-  background-color: #1E1F25;
-
-}
-.containerSide {
+.registerContainer {
   background-color: #1E1F25;
   flex: 3;
   display: flex;
@@ -18,10 +6,11 @@ form{
   align-content: space-between;
 }
 
-title {
-  font-size: smaller;
+h1 {
+  font-family: 'Poppins' ;
+  font-size: 1.4em;
+  color: #F8F8F8;
 }
-
 
 p {
   font-size: 0.8em;
@@ -37,7 +26,7 @@ label {
 
 .error {
   color: red;
-  font-size: 1em;
+  font-size: 0.85em;
   font-style: inherit;
 }
  
@@ -49,3 +38,4 @@ select, option {
   background-color: #333333;
   color:#F8F8F8 ;
 }
+

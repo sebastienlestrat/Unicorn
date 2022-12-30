@@ -22,8 +22,8 @@ const routes: Routes = [
       },
       {
         path: 'register', // localhost:4200/register
-        component: RegisterFormComponent, 
-      }
+        component: RegisterFormComponent
+      },
     ]
   },
   {
